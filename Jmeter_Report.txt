@@ -1,0 +1,15 @@
+For report of Jmeter in Jenkins
+
+cd C:\NexGen_Testing_Stream\apache-jmeter-3.2\apache-jmeter-3.2\bin
+
+jmeter -jjmeter.save.saveservice.output_formal=xml -n -t C:\NexGen_Testing_Stream\apache-jmeter-3.2\apache-jmeter-3.2\bin\TestMeCorrelation.jmx -l C:\NexGen_Testing_Stream\apache-jmeter-3.2\apache-jmeter-3.2\bin\Katie.jtl
+
+Navigate to Jenkins 
+New item- Project name-freestyle prok-ok-desc
+build-execute windows as batch file
+copy cmnd 1 and 2 into publish cmnd section
+post build - publish performance trend report
+
+copy path of .jtl file, paste in source data files 
+
+apply save
